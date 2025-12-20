@@ -1,3 +1,21 @@
-import { type RouteConfig, index } from "@react-router/dev/routes";
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
-export default [index("routes/home.tsx")] satisfies RouteConfig;
+// export default [
+//     index("NewRoutePage/NewRoutePage.tsx")
+// ] satisfies RouteConfig;
+
+
+// export default [
+//   // parent route
+//   route("/", "./components/NewHomePage/NewHomePage.tsx", [
+//     // child routes renders into the NewHomePage.tsx Outlet at /newHome
+//     // index("./home.tsx"),
+//     // route("settings", "./settings.tsx"),
+//   ]),
+// ] satisfies RouteConfig;
+
+
+export default [
+  // parent route
+  route("/", "./components/NewHomePage/NewHomePage.tsx"),
+] satisfies RouteConfig;
