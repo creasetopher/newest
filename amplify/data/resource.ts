@@ -3,7 +3,8 @@ import { Amplify } from "aws-amplify";
 import { getUrl } from "aws-amplify/storage";
 import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/data";
-import outputs from "../../amplify_outputs.json";
+
+// import outputs from "../../amplify_outputs.json";
 
 /*== STEP 1 ===============================================================
 The section below creates a Feedback database table with a "content" field. The authorization rule below
@@ -31,10 +32,10 @@ export const data = defineData({
 
 
 
-Amplify.configure(outputs);
-const client = generateClient({
-  authMode: "userPool",
-});
+// Amplify.configure(outputs);
+// const client = generateClient({
+//   authMode: "userPool",
+// });
 
 /*== STEP 3 ===============================================================
 Fetch records from the database and use them in your frontend component.
