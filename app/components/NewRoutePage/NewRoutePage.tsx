@@ -8,5 +8,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function NewRoutePage() {
-  return <>Hi</>;
+  return <div><b>THIS IS A NEW ROUTE </b></div>;
 }

@@ -1,8 +1,11 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
-import { Amplify } from "aws-amplify";
-import { getUrl } from "aws-amplify/storage";
-import { uploadData } from "aws-amplify/storage";
-import { generateClient } from "aws-amplify/data";
+// import { Authenticator } from '@aws-amplify/ui-react';
+// import { Amplify } from "aws-amplify";
+// import { getUrl } from "aws-amplify/storage";
+// import { uploadData } from "aws-amplify/storage";
+// import { generateClient } from "aws-amplify/data";
 
 // import outputs from "../../amplify_outputs.json";
 
@@ -25,6 +28,8 @@ export type Schema = ClientSchema<typeof schema>;
 export const data = defineData({
   schema,
   authorizationModes: {
+    // This tells the data client in your app (generateClient())
+    // to sign API requests with the user authentication token.
     defaultAuthorizationMode: 'identityPool',
   },
 });
@@ -32,10 +37,7 @@ export const data = defineData({
 
 
 
-// Amplify.configure(outputs);
-// const client = generateClient({
-//   authMode: "userPool",
-// });
+
 
 /*== STEP 3 ===============================================================
 Fetch records from the database and use them in your frontend component.
